@@ -2,11 +2,11 @@
   "name": "api-rest",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
+  "main": "src/index.js",
   "scripts": {
     "start": "ts-node-dev ./src/index.ts",
     "postinstall": "tsc",
-    "production": " node ./build/index.js",
+    "production": " node ./build/index.js ",
     "test": "jest",
     "knex:rollback-all": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:rollback --all",
     "knex:rollback": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:rollback",
@@ -45,11 +45,9 @@
     "pg": "^8.11.5",
     "ts-jest": "^29.1.2",
     "yup": "^1.4.0"
-    
   },
-
-  
   "engines": {
     "node": "21.x"
-  }
+  },
+  "type": "module"
 }
