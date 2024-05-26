@@ -1,31 +1,23 @@
-# Use a imagem base do PostgreSQL
-FROM postgres:latest
+# Use a imagem base do Node.js
+FROM node:20
+
 # Configurar o diretório de trabalho
 WORKDIR /usr/src/app
 
 # Copiar package.json e package-lock.json
 COPY package*.json ./
 
-# Instalar as dependências
+# Instalar as dependências e rodar o postinstall
 RUN npm install
 
 # Copiar o restante do código da aplicação
 COPY . .
 
-# Compilar TypeScript (se aplicável)
-RUN npm run build
+# Rodar o build para produção
+RUN npm run postinstall
 
 # Expor a porta que a aplicação vai rodar
 EXPOSE 3333
 
-# Definir o comando para rodar a aplicação
-CMD ["npm", "start"]
-
-
-# Defina variáveis de ambiente (opcional)
-ENV DATABASE_HOST=localhost
-ENV DATABASE_USER=postgres
-ENV DATABASE_NAME=my-database
-ENV DATABASE_PASSWORD=root
-ENV DATABASE_PORT=5432
-
+# Definir o comando para rodar a aplicação no modo de produção
+CMD ["npm", "run", "production"]
