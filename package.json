@@ -48,8 +48,6 @@
   },
   "engines": {
     "node": "21.x"
-  }
-
-
-  
+  },
+  "type": "module"
 }
