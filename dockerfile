@@ -9,4 +9,4 @@ RUN npm i
 
 CMD ["npm", "start"]
 
-EXPOSE 3333
+EXPOSE 3002

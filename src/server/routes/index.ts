@@ -5,7 +5,7 @@ import { TokemValidation } from '../shared/middlewares/TokenValidetion';
 const router = Router()
 
 router.get("/", (req, res) => {
-    return res.send(`ola dev tudo bem com GET chama`);
+    return res.send(`ola dev tudo bem com GET chama dev`);
 });
 router.get('/cidades',TokemValidation, criateCidade.GetAllValidation, criateCidade.getAll);
 router.post('/cidades',TokemValidation, criateCidade.CreateValidation, criateCidade.Create);
