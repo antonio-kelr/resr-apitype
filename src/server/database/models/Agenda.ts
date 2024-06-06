@@ -1,7 +1,7 @@
 export interface IAgenda {
     id: number,
     nome: string,
-    data: string,
+    data: Date,
     descricao: string,
 }
 
