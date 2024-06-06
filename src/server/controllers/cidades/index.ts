@@ -5,13 +5,12 @@ import * as getById from './GetById'
 import * as update from './Update'
 import * as deliteBayID from './DeleteById'
 
-export const criateCidade =  {
+export const CidadesController = {
     ...create,
     ...getAll,
     ...getById,
     ...update,
     ...deliteBayID,
-
 };
 
 

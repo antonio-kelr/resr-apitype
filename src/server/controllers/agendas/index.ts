@@ -5,7 +5,7 @@ import * as getById from './GetById'
 import * as update from './Update'
 import * as deliteBayID from './DeleteById'
 
-export const criateAgenda =  {
+export const AgendasController =  {
     ...create,
     ...getAll,
     ...getById,
