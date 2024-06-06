@@ -16,7 +16,7 @@ export const CreateValidation = validation((getSchema) => ({
   })),
 }));
 
-export const Create = async (req: Request<{}, {}, IPessoa>, res: Response) => {
+export const create = async (req: Request<{}, {}, IPessoa>, res: Response) => {
   const result = await PessoasProvider.create(req.body);
 
   if (result instanceof Error) {
