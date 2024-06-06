@@ -8,8 +8,8 @@ export const development: Knex.Config = {
   connection: {
     host: String(process.env.DATABASE_HOST ||"localhost"),
     user: String(process.env.DATABASE_USER ||"postgres"),
-    database: String(process.env.DATABASE_NAME || "api-node"),
-    password: String(process.env.DATABASE_PASSWORD || "Lorim513021",),
+    database: String(process.env.DATABASE_NAME || "postgres"),
+    password: String(process.env.DATABASE_PASSWORD || "root",),
     port: Number(process.env.DATABASE_PORT || 5432),
     ssl: false,  // Desabilitar SSL
   },
