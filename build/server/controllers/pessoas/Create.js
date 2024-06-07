@@ -32,7 +32,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Create = exports.CreateValidation = void 0;
+exports.create = exports.CreateValidation = void 0;
 const yup = __importStar(require("yup"));
 const middlewares_1 = require("../../shared/middlewares");
 const http_status_codes_1 = require("http-status-codes");
@@ -44,7 +44,7 @@ exports.CreateValidation = (0, middlewares_1.validation)((getSchema) => ({
         cidadeId: yup.number().integer().required().min(1),
     })),
 }));
-const Create = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const create = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const result = yield pessoas_1.PessoasProvider.create(req.body);
     if (result instanceof Error) {
         return res.status(http_status_codes_1.StatusCodes.INTERNAL_SERVER_ERROR).json({
@@ -55,4 +55,4 @@ const Create = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     }
     return res.status(http_status_codes_1.StatusCodes.CREATED).json(result);
 });
-exports.Create = Create;
+exports.create = create;

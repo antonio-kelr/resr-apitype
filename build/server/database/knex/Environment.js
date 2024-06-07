@@ -6,25 +6,28 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.production = exports.test = exports.development = void 0;
 const path_1 = __importDefault(require("path"));
 exports.development = {
-    client: 'sqlite3',
+    client: 'pg',
     useNullAsDefault: true,
     connection: {
-        filename: path_1.default.resolve(__dirname, '..', '..', '..', '..', 'database.sqlite')
+        host: String(process.env.DATABASE_HOST || "localhost"),
+        user: String(process.env.DATABASE_USER || "postgres"),
+        database: String(process.env.DATABASE_NAME || "postgres"),
+        password: String(process.env.DATABASE_PASSWORD || "root"),
+        port: Number(process.env.DATABASE_PORT || 5432),
+        ssl: false, // Desabilitar SSL
     },
     migrations: {
-        directory: path_1.default.resolve(__dirname, '..', 'migrations')
+        directory: path_1.default.resolve(__dirname, '..', 'migrations'),
     },
     seeds: {
-        directory: path_1.default.resolve(__dirname, '..', 'seeds')
+        directory: path_1.default.resolve(__dirname, '..', 'seeds'),
     },
     pool: {
-        afterCreate: (connection, done) => {
-            connection.run('PRAGMA foreign_keys = ON');
-            done();
-        }
+        min: 1,
+        max: 10
     }
 };
-exports.test = Object.assign(Object.assign({}, exports.development), { connection: ':memory:' });
+exports.test = Object.assign({ connection: ':memory:' }, exports.development);
 exports.production = {
     client: 'pg',
     migrations: {
@@ -39,6 +42,6 @@ exports.production = {
         database: process.env.DATABASE_NAME,
         password: process.env.DATABASE_PASSWORD,
         port: Number(process.env.DATABASE_PORT || 5432),
-        ssl: { rejectUnauthorized: false },
+        ssl: false, // Desabilitar SSL
     },
 };

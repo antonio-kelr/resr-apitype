@@ -6,4 +6,7 @@ var ETableNames;
     ETableNames["cidade"] = "cidade";
     ETableNames["pessoa"] = "pessoa";
     ETableNames["usuario"] = "usuario";
+    ETableNames["agenda"] = "agenda";
+    ETableNames["classificados"] = "classificados";
+    ETableNames["categoria"] = "categoria";
 })(ETableNames || (exports.ETableNames = ETableNames = {}));

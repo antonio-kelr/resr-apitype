@@ -23,10 +23,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.criateCidade = void 0;
+exports.CidadesController = void 0;
 const create = __importStar(require("./Create"));
 const getAll = __importStar(require("./GetAll"));
 const getById = __importStar(require("./GetById"));
 const update = __importStar(require("./Update"));
 const deliteBayID = __importStar(require("./DeleteById"));
-exports.criateCidade = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, create), getAll), getById), update), deliteBayID);
+exports.CidadesController = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, create), getAll), getById), update), deliteBayID);

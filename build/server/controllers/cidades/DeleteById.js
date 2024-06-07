@@ -32,7 +32,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deliteBayID = exports.DeleteValidation = void 0;
+exports.deleteById = exports.DeleteValidation = void 0;
 const yup = __importStar(require("yup"));
 const middlewares_1 = require("../../shared/middlewares");
 const http_status_codes_1 = require("http-status-codes");
@@ -42,7 +42,7 @@ exports.DeleteValidation = (0, middlewares_1.validation)((getSchema) => ({
         id: yup.number().integer().moreThan(0),
     })),
 }));
-const deliteBayID = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const deleteById = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     if (!req.params.id) {
         return res.status(http_status_codes_1.StatusCodes.BAD_REQUEST).json({
             errors: {
@@ -60,4 +60,4 @@ const deliteBayID = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     }
     return res.status(http_status_codes_1.StatusCodes.NO_CONTENT).send();
 });
-exports.deliteBayID = deliteBayID;
+exports.deleteById = deleteById;

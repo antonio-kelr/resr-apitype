@@ -23,10 +23,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.criatePesoa = void 0;
+exports.PessoasController = void 0;
 const create = __importStar(require("./Create"));
 const getAll = __importStar(require("./GetAll"));
 const getById = __importStar(require("./GetById"));
 const update = __importStar(require("./Update"));
 const deliteBayID = __importStar(require("./DeleteById"));
-exports.criatePesoa = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, create), getAll), getById), update), deliteBayID);
+exports.PessoasController = Object.assign(Object.assign(Object.assign(Object.assign(Object.assign({}, create), getAll), getById), update), deliteBayID);
