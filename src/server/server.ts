@@ -7,6 +7,7 @@ import pessoasRouter from './routes/pessoas'
 import agendasRouter from './routes/agendas'
 import usuariosRouter from './routes/usuarios'
 
+
 const server = express();
 
 server.use(express.json())
