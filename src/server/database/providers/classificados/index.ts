@@ -7,17 +7,24 @@ export const ClassificadosProvider = {
 
   async create(classificados: Omit<IClassificados, 'id'>): Promise<IClassificados | Error> {
     try {
-      console.log(classificados);
-      const result = (await Knex(ETableNames.classificados).insert(classificados)).find((item) => item);
-      console.log(result);
+      const result = await Knex(ETableNames.classificados).insert(classificados).returning('*')
 
       if (typeof result === 'object') {
-        return result;
+        return result[0] as IClassificados;
       }
 
       return new Error('Erro ao cadastrar o registro');
     } catch (error) {
+      console.log(error);
       return new Error('Erro ao cadastrar o registro');
     }
+  },
+
+  async getAll() {
+    return await Knex(ETableNames.classificados).select('*');
+  },
+
+  async getAllCategorias() {
+    return await Knex(ETableNames.categoria).select('*');
   }
 };
