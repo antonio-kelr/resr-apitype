@@ -9,6 +9,7 @@ import usuariosRouter from './routes/usuarios'
 import classificadosRouter from './routes/classificados'
 import cors from 'cors'
 
+
 const server = express();
 
 server.use(express.json())
