@@ -3,7 +3,7 @@ import * as yup from 'yup';
 
 import { validation } from '../../shared/middlewares';
 import { StatusCodes } from 'http-status-codes';
-import { AgendaProvader } from '../../database/providers/agedas';
+import { AgendaProvader } from '../../database/providers/agendas';
 
 
 interface IQueryProps {

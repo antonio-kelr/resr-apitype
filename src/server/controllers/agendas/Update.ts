@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import { validation } from '../../shared/middlewares';
 import { StatusCodes } from 'http-status-codes';
 import { IAgenda } from '../../database/models';
-import { AgendaProvader } from '../../database/providers/agedas';
+import { AgendaProvader } from '../../database/providers/agendas';
 
 
 interface IParamProps {

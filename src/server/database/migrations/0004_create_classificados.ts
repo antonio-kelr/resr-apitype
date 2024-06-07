@@ -6,13 +6,14 @@ export async function up(knex: Knex) {
     table.bigIncrements('id').primary().index();
     table.string('titulo',).index().notNullable();
     table.text('descricao').index().notNullable();
-    table.date('preco').index().notNullable();
-    table.date('telefone').index().notNullable();
-    table.date('email').index().notNullable();
-    table.date('cidade').index().notNullable();
-    table.date('estado').index().notNullable();
-    table.date('categoria').index().notNullable();
+    table.decimal('preco').index().notNullable();
+    table.text('telefone').index().notNullable();
+    table.text('email').index().notNullable();
+    table.text('cidade').index().notNullable();
+    table.text('estado').index().notNullable();
+    table.bigint('categoria').index().notNullable();
     table.date('data').index().notNullable();
+    table.boolean('ativo').index().notNullable().defaultTo(false);
 
     table.comment('Tabela usada para armazenar classificados.');
   }).then(() => {

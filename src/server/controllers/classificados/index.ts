@@ -36,5 +36,35 @@ export const ClassificadosController = {
     }
 
     return res.status(StatusCodes.CREATED).json(result);
+  },
+
+  async getAll(req: Request<{}, {}, IClassificados>, res: Response) {
+    const result = await ClassificadosProvider.getAll();
+
+    if (result instanceof Error) {
+      return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+        errors: { default: result.message }
+      });
+    }
+
+    res.setHeader('access-control-expose-headers', 'x-total-count');
+    res.setHeader('x-total-count', result);
+
+    return res.status(StatusCodes.OK).json(result);
+  },
+
+  async getAllCategorias(req: Request<{}, {}, IClassificados>, res: Response) {
+    const result = await ClassificadosProvider.getAllCategorias();
+
+    if (result instanceof Error) {
+      return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+        errors: { default: result.message }
+      });
+    }
+
+    res.setHeader('access-control-expose-headers', 'x-total-count');
+    res.setHeader('x-total-count', result);
+
+    return res.status(StatusCodes.OK).json(result);
   }
 };
