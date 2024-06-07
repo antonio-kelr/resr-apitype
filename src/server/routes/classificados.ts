@@ -4,6 +4,8 @@ import { TokemValidation } from "../shared/middlewares";
 
 const router = Router()
 
-router.post('', CreateValidation, ClassificadosController.create);
+router.get('', TokemValidation, CreateValidation, ClassificadosController.getAll);
+router.post('', TokemValidation, CreateValidation, ClassificadosController.create);
+router.get('/categorias', TokemValidation, CreateValidation, ClassificadosController.getAllCategorias);
 
 export default router
