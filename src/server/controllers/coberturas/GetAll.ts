@@ -3,7 +3,7 @@ import * as yup from 'yup';
 
 import { validation } from '../../shared/middlewares';
 import { StatusCodes } from 'http-status-codes';
-import { AgendaProvader } from '../../database/providers/agendas';
+import {CoberturaProvaider  } from '../../database/providers/coberturas';
 
 
 interface IQueryProps {
@@ -22,8 +22,8 @@ export const GetAllValidation = validation((getSchema) => ({
 }));
 
 export const getAll = async (req: Request<{}, {}, {}, IQueryProps>, res: Response) => {
-  const result = await AgendaProvader.getAll(req.query.page || 1, req.query.limit || 100 , req.query.filter || '', Number(req.query.id || 0));
-  const count = await AgendaProvader.count(req.query.filter);
+  const result = await CoberturaProvaider.getAll(req.query.page || 1, req.query.limit || 100 , req.query.filter || '', Number(req.query.id || 0));
+  const count = await CoberturaProvaider.count(req.query.filter);
 
   if (result instanceof Error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({

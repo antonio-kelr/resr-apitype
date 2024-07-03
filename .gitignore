@@ -1,5 +1,6 @@
 node_modules/
 .env
+.fiberese-key.json
 /coverage
 *.sqlite
 build

@@ -5,6 +5,8 @@ import apiRouter from './routes/api'
 import cidadesRouter from './routes/cidades'
 import pessoasRouter from './routes/pessoas'
 import agendasRouter from './routes/agendas'
+import coberturaRouter from './routes/coberturas'
+import coberturaImagensRouter from './routes/coberturaImagens'
 import usuariosRouter from './routes/usuarios'
 import classificadosRouter from './routes/classificados'
 import cors from 'cors'
@@ -25,6 +27,8 @@ server.use('/', apiRouter)
 server.use('/cidades', cidadesRouter)
 server.use('/pessoas', pessoasRouter)
 server.use('/agendas', agendasRouter)
+server.use('/coberturas', coberturaRouter)
+server.use('/coberturasImg', coberturaImagensRouter)
 server.use('/usuarios', usuariosRouter)
 server.use('/classificados', classificadosRouter)
 

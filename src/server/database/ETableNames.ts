@@ -6,4 +6,6 @@ export enum ETableNames {
   agenda = 'agenda',
   classificados = 'classificados',
   categoria = 'categoria',
+  coberturas = 'coberturas',
+  coberturaimagens = 'coberturaimagens',
 }

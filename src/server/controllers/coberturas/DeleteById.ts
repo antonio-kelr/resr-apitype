@@ -3,7 +3,7 @@ import * as yup from 'yup';
 
 import { validation } from '../../shared/middlewares';
 import { StatusCodes } from 'http-status-codes';
-import { AgendaProvader } from '../../database/providers/agendas';
+import {CoberturaProvaider  } from '../../database/providers/coberturas';
 
 
 interface IQueryProps {
@@ -24,7 +24,7 @@ export const deleteById = async (req: Request<IQueryProps>, res: Response) => {
     });
   }
 
-  const result = await AgendaProvader.deleteById(req.params.id);
+  const result = await CoberturaProvaider.deleteById(req.params.id);
   if (result instanceof Error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       errors: {

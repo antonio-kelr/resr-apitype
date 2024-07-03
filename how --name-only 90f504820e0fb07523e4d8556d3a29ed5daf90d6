@@ -1,0 +1,239 @@
+[33mcommit 90f504820e0fb07523e4d8556d3a29ed5daf90d6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Wed Jul 3 19:52:26 2024 -0300
+
+    criando coberturas e coberturasImagens
+
+[33mcommit 6380efdb29759271c28961420a6ec40db5ec3541[m[33m ([m[1;31morigin/main[m[33m)[m
+Merge: 9fc3f79 7570590
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Thu Jun 6 23:28:42 2024 -0300
+
+    Merge branch 'main' of https://github.com/antonio-kelr/resr-apitype
+
+[33mcommit 9fc3f7964870cd2ff30e2c03a9dd217cdce454fc[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Thu Jun 6 23:28:37 2024 -0300
+
+    alt:build
+
+[33mcommit 7570590d3cbd5d56fb67ca0a794696f335c7cef0[m
+Merge: 66b2656 c393d2b
+Author: antonio-kelr <139500509+antonio-kelr@users.noreply.github.com>
+Date:   Thu Jun 6 23:24:22 2024 -0300
+
+    Merge pull request #5 from lorimweb/feature/fixes
+    
+    Feature/fixes
+
+[33mcommit c393d2bfe8aa71478fb74a318dd78daff8781625[m
+Merge: d0482b8 66b2656
+Author: Clenilson Lopes <lorimweb@gmail.com>
+Date:   Thu Jun 6 23:22:08 2024 -0300
+
+    Merge branch 'feature/fixes' of https://github.com/lorimweb/resr-apitype into feature/fixes
+
+[33mcommit d0482b8664af0fc91a42d0d8a5b68bef1dd4c1e8[m
+Author: Clenilson Lopes <lorimweb@gmail.com>
+Date:   Thu Jun 6 23:19:59 2024 -0300
+
+    finalizando modulo de classificados
+
+[33mcommit 66b2656a950494f840856ba7c09cb1e3406d5e52[m
+Merge: 31a5528 00a09ce
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Thu Jun 6 22:27:14 2024 -0300
+
+    Merge branch 'main' of https://github.com/antonio-kelr/resr-apitype
+
+[33mcommit 31a5528b4b0acb865bb12d24e7ce53b7ebd3ea16[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Thu Jun 6 22:27:08 2024 -0300
+
+    alt:server
+
+[33mcommit 00a09ced8294d31a6011048c5186f30f38637d22[m
+Merge: 7f749b4 44ad48d
+Author: antonio-kelr <139500509+antonio-kelr@users.noreply.github.com>
+Date:   Thu Jun 6 22:25:50 2024 -0300
+
+    Merge pull request #4 from lorimweb/feature/fixes
+    
+    liberando cors para localhost
+
+[33mcommit 44ad48d9bd98bbaf54375891001f05bb7168e06d[m
+Author: Clenilson Lopes <lorimweb@gmail.com>
+Date:   Thu Jun 6 22:24:13 2024 -0300
+
+    liberando cors para localhost
+
+[33mcommit 7f749b46a4801c4b6c8b25c343033cd25bd1a1f9[m
+Merge: 1f77a28 9b97485
+Author: antonio-kelr <139500509+antonio-kelr@users.noreply.github.com>
+Date:   Thu Jun 6 02:18:53 2024 -0300
+
+    Merge pull request #3 from lorimweb/feature/fixes
+    
+    colocando rotas em arquivos separados
+
+[33mcommit 9b97485bf2f0c770898e78994eef922799b3f9e1[m
+Author: Clenilson Lopes <lorimweb@gmail.com>
+Date:   Thu Jun 6 02:13:30 2024 -0300
+
+    colocando rotas em arquivos separados
+
+[33mcommit 1f77a28b977b25bf7049e02efa1054dad30e74eb[m
+Merge: adb37a9 29a06f5
+Author: antonio-kelr <139500509+antonio-kelr@users.noreply.github.com>
+Date:   Thu Jun 6 01:36:11 2024 -0300
+
+    Merge pull request #2 from lorimweb/feature/fixes
+    
+    ajustando dados do banco de dados
+
+[33mcommit 29a06f5f00f2ad1e712be74bed375b5db1594f42[m
+Author: Clenilson Lopes <lorimweb@gmail.com>
+Date:   Thu Jun 6 01:29:53 2024 -0300
+
+    ajustando dados do banco de dados
+
+[33mcommit adb37a973087d64d20e0783ec2d79d48a7b6171d[m
+Merge: 44d7d27 03dceea
+Author: antonio-kelr <139500509+antonio-kelr@users.noreply.github.com>
+Date:   Thu Jun 6 01:15:54 2024 -0300
+
+    Merge pull request #1 from lorimweb/main
+    
+    ajustando nomes de metodos
+
+[33mcommit 03dceea6e75a2f448df4d7ae811dc0d65779a577[m
+Author: Clenilson Lopes <lorimweb@gmail.com>
+Date:   Thu Jun 6 01:13:31 2024 -0300
+
+    ajustando nomes de metodos
+
+[33mcommit 44d7d273eef1ba3f3fc72301a105dbd5c6703096[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Thu Jun 6 00:20:32 2024 -0300
+
+    alt:data
+
+[33mcommit a1384ba496640ac9f323a16abaf59c20c4a09bad[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Wed Jun 5 18:12:54 2024 -0300
+
+    alt:criete agenda
+
+[33mcommit d00ff66dbf703498ff1dc8d365d168008696cfc7[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Wed May 29 23:44:19 2024 -0300
+
+    feat:json
+
+[33mcommit f14e4bbd336136e590ebeab4e3ad39f51ff7a1bb[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Tue May 28 12:15:17 2024 -0300
+
+    alt:dockerfile
+
+[33mcommit 5c3280e7dc23adf75b1b71dba7ad6a4238c412df[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Mon May 27 20:10:13 2024 -0300
+
+    alt:environment
+
+[33mcommit 5c782341a87806342e102a0404d13c2efec8bda2[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Mon May 27 00:49:07 2024 -0300
+
+    ENV
+
+[33mcommit f4b03df78d6f2d09ccec0069554e81524d88cce1[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Mon May 27 00:32:34 2024 -0300
+
+    alt:env
+
+[33mcommit 1aa7ab65560a1b97364e7e9b48cad4e51f29a8c7[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 23:54:48 2024 -0300
+
+    alt:basicas
+
+[33mcommit 94bc914995bcba3480d55ffb5a02a7ea1056909c[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 21:52:47 2024 -0300
+
+    alt:build
+
+[33mcommit 3f235afe1e6f6a68a26526eee35d0ff2b112c2ad[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 18:36:59 2024 -0300
+
+    jalt:json
+
+[33mcommit 3a4531ae16b7b3612aaed18cb054d87f32ffd484[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 18:35:45 2024 -0300
+
+    json
+
+[33mcommit 681b014211a3beb10b43157c7d4f0f9694ed1329[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 18:33:23 2024 -0300
+
+    alt:type
+
+[33mcommit f45c4ddcf715b25aa2da2818591639d27b94dff4[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 18:24:17 2024 -0300
+
+    alt:arquivo
+
+[33mcommit 2e3f82438d79825183735d872341d5bacbe9f753[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 18:11:55 2024 -0300
+
+    feat:altBasicas
+
+[33mcommit 19fc94583cddbe1eecfde721ce5fc7499f5956e1[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 17:43:16 2024 -0300
+
+    alt:json
+
+[33mcommit 22efc0b8d4712dcdea0cf0e72f073fbf9944c17b[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 17:41:10 2024 -0300
+
+    build
+
+[33mcommit a7d0465b2969fe08e564cb081df11237113c71e2[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 17:33:23 2024 -0300
+
+    alt:json
+
+[33mcommit ddd457ca06261428d953f0e7ca51d8cc96029e29[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 15:44:22 2024 -0300
+
+    alte: dockerfile
+
+[33mcommit f2348bdb3e51da63f1afed06de1cf92201c3e1c5[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 03:16:24 2024 -0300
+
+    alteracao:docker
+
+[33mcommit 114cb810a8706c35519c951b5a9189fa1810d2f7[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Sun May 26 03:02:15 2024 -0300
+
+    feat:
+
+[33mcommit 2a38222a7daec9ce3a5501e269fbce6305db2a5c[m
+Author: antonio-kelr <antoniofilhodaconceicaorozafil@gmail.com>
+Date:   Thu May 23 22:34:43 2024 -0300
+
+    api adicionado o postgres

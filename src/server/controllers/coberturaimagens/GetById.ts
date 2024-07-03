@@ -3,19 +3,19 @@ import * as yup from 'yup';
 
 import { validation } from '../../shared/middlewares';
 import { StatusCodes } from 'http-status-codes';
-import { AgendaProvader } from '../../database/providers/agendas';
+import { CoberturaImagensProvider } from '../../database/providers/coberturaImagens';
 
 
 interface IQueryProps {
   id?: number
 }
-export const DeleteValidation = validation((getSchema) => ({
+export const GetByIdAgenda = validation((getSchema) => ({
   params: getSchema<IQueryProps>(yup.object().shape({
-    id: yup.number().integer().moreThan(0),
+    id: yup.number().integer().optional().moreThan(0),
   })),
 }));
 
-export const deleteById = async (req: Request<IQueryProps>, res: Response) => {
+export const getById = async (req: Request<IQueryProps>, res: Response) => {
   if (!req.params.id) {
     return res.status(StatusCodes.BAD_REQUEST).json({
       errors: {
@@ -23,8 +23,7 @@ export const deleteById = async (req: Request<IQueryProps>, res: Response) => {
       }
     });
   }
-
-  const result = await AgendaProvader.deleteById(req.params.id);
+  const result = await CoberturaImagensProvider.getById(req.params.id);
   if (result instanceof Error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       errors: {
@@ -33,5 +32,5 @@ export const deleteById = async (req: Request<IQueryProps>, res: Response) => {
     });
   }
 
-  return res.status(StatusCodes.NO_CONTENT).send();
+  return res.status(StatusCodes.OK).json(result);
 };
