@@ -4,10 +4,10 @@ import { CidadesController } from "../controllers";
 
 const router = Router()
 
-router.get('', TokemValidation, CidadesController.GetAllValidation, CidadesController.getAll);
-router.post('', TokemValidation, CidadesController.CreateValidation, CidadesController.create);
-router.get('/:id', TokemValidation, CidadesController.GetByIdValidation, CidadesController.getById);
-router.put('/:id', TokemValidation, CidadesController.updateValidation, CidadesController.update);
-router.delete('/:id', TokemValidation, CidadesController.DeleteValidation, CidadesController.deleteById);
+router.get('',  CidadesController.GetAllValidation, CidadesController.getAll);
+router.post('',  CidadesController.CreateValidation, CidadesController.create);
+router.get('/:id',  CidadesController.GetByIdValidation, CidadesController.getById);
+router.put('/:id',  CidadesController.updateValidation, CidadesController.update);
+router.delete('/:id',  CidadesController.DeleteValidation, CidadesController.deleteById);
 
 export default router

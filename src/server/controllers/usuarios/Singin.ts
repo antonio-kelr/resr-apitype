@@ -8,7 +8,7 @@ import { validation } from '../../shared/middlewares/Validation';
 import { IUsuario } from '../../database/models';
 
 
-interface IBodyProps extends Omit<IUsuario, 'id' | 'nome'> { }
+interface IBodyProps extends Omit<IUsuario, 'id' | 'nome' | 'recado_id'> { }
 
 export const signInValidation = validation((getSchema) => ({
   body: getSchema<IBodyProps>(yup.object().shape({
@@ -49,7 +49,7 @@ export const signIn = async (req: Request<{}, {}, IBodyProps>, res: Response) =>
         }
       });
     }
-    return res.status(StatusCodes.OK).json({ accessToken });
+    return res.status(StatusCodes.OK).json({ accessToken, userId: usuario.id  });
     
   }
 };

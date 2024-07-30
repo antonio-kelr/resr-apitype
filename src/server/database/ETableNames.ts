@@ -8,4 +8,5 @@ export enum ETableNames {
   categoria = 'categoria',
   coberturas = 'coberturas',
   coberturaimagens = 'coberturaimagens',
+  recados = 'recados',
 }

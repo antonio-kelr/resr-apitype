@@ -1,4 +1,5 @@
 import {IAgenda, ICidades, ICoberturas, ICoberturasImagens, IPessoa, IUsuario} from '../../models'
+import { IRecados } from '../../models/recados'
 
 declare module 'knex/types/tables' {
     interface Tables {
@@ -8,5 +9,6 @@ declare module 'knex/types/tables' {
       agenda: IAgenda
       cobertura: ICoberturas
       coberturaimagens: ICoberturasImagens
+      recado: IRecados
     }
   }

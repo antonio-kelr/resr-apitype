@@ -3,19 +3,21 @@ import * as yup from 'yup';
 
 import { validation } from '../../shared/middlewares';
 import { StatusCodes } from 'http-status-codes';
-import { ICoberturasImagens } from '../../database/models/coberturaImagens';
-import { CoberturaImagensProvider } from '../../database/providers/coberturaImagens';
+import { IRecados } from '../../database/models/recados';
+import { RecadosProvaider  } from '../../database/providers/recados';
 
 
 interface IParamProps {
   id?: number
 }
-interface IBodyProps extends Omit<ICoberturasImagens, 'id' > { }
+interface IBodyProps extends Omit<IRecados, 'id'> { }
 export const updateAgenda = validation((getSchema) => ({
   body: getSchema<IBodyProps>(yup.object().shape({
-    titulo: yup.string().required().min(10).max(150),
-    url: yup.string().url().required(),
-    cobertura_id: yup.number().required()
+    nome: yup.string().required().min(5).max(150),
+    telefone: yup.string().required().min(11).max(12),
+    email: yup.string().required().email(),
+    mensagem: yup.string().required().min(10).max(150),
+    usuario_id: yup.number().required(), 
 
   })),
   params: getSchema<IParamProps>(yup.object().shape({
@@ -31,7 +33,7 @@ export const update = async (req: Request<IParamProps, {}, IBodyProps>, res: Res
       }
     });
   }
-  const result = await CoberturaImagensProvider.updateById(req.params.id, req.body);
+  const result = await RecadosProvaider.updateById(req.params.id, req.body);
   if (result instanceof Error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       errors: {

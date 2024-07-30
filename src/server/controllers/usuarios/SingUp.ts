@@ -13,6 +13,7 @@ export const singUpValidation = validation((getSchema) => ({
     nome: yup.string().required().min(3),
     email: yup.string().required().email().min(6),
     senha: yup.string().required().min(6),
+    recado_id: yup.number().required()
   })),
 }));
 
