@@ -28,7 +28,7 @@ const jwt = __importStar(require("jsonwebtoken"));
 const sign = (data) => {
     if (!process.env.JWT_SECRET)
         return 'JWT_SECRET_NOT_FOUND';
-    return jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '24h' });
+    return jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '48h' });
 };
 const verify = (token) => {
     if (!process.env.JWT_SECRET)

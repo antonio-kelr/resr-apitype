@@ -10,6 +10,8 @@ import coberturaImagensRouter from './routes/coberturaImagens'
 import recadoRouter from './routes/recados'
 import usuariosRouter from './routes/usuarios'
 import classificadosRouter from './routes/classificados'
+import classificadoImgsRouter from './routes/classificadoImgs'
+import noticiasRouter from './routes/noticias'
 import cors from 'cors'
 
 
@@ -26,13 +28,15 @@ server.use(cors(corsOptions));
 
 server.use('/', apiRouter)
 server.use('/cidades', cidadesRouter)
+server.use('/usuarios', usuariosRouter)
 server.use('/pessoas', pessoasRouter)
 server.use('/agendas', agendasRouter)
-server.use('/coberturas', coberturaRouter)
+server.use('/noticias', noticiasRouter)
 server.use('/recados', recadoRouter)
+server.use('/coberturas', coberturaRouter)
 server.use('/coberturasImg', coberturaImagensRouter)
-server.use('/usuarios', usuariosRouter)
 server.use('/classificados', classificadosRouter)
+server.use('/classifcadoImgs', classificadoImgsRouter)
 
 
 export { server }

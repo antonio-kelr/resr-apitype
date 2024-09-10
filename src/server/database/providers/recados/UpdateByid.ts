@@ -1,19 +1,37 @@
-import { ETableNames } from '../../ETableNames';
-import { IRecados } from '../../models/recados';
-import { Knex } from '../../knex';
+import { Knex } from "../../knex";
+import { ETableNames } from "../../ETableNames";
 
+interface IUpdateRecado {
+  nome?: string;
+  telefone?: string;
+  email?: string;
+  mensagem?: string;
+  usuario_id?: number;
+}
 
-export const updateById = async (id: number, agenda: Omit<IRecados, 'id'>): Promise<void | Error> => {
+export const updateById  = async (id: number,updatedData: IUpdateRecado): Promise<void | Error> => {
   try {
-    const result = await Knex(ETableNames.recados)
-      .update(agenda)
-      .where('id', '=', id);
+    if (id <= 0) {
+      return new Error("ID inválido");
+    }
 
-    if (result > 0) return;
+    await Knex(ETableNames.recados)
+      .where("id", id)
+      .update({
+        nome: updatedData.nome,
+        telefone: updatedData.telefone,
+        email: updatedData.email,
+        mensagem: updatedData.mensagem,
+        usuario_id: updatedData.usuario_id
+      });
 
-    return new Error('Erro ao atualizar o registro');
   } catch (error) {
-    console.log(error);
-    return new Error('Erro ao atualizar o registro');
+    console.error(error);
+    return new Error("Erro ao atualizar o recado");
   }
 };
+
+
+
+
+

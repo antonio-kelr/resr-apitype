@@ -14,7 +14,7 @@ interface IBodyProps extends Omit<IRecados, 'id'> { }
 export const updateAgenda = validation((getSchema) => ({
   body: getSchema<IBodyProps>(yup.object().shape({
     nome: yup.string().required().min(5).max(150),
-    telefone: yup.string().required().min(11).max(12),
+    telefone: yup.string().required().min(7).max(15),
     email: yup.string().required().email(),
     mensagem: yup.string().required().min(10).max(150),
     usuario_id: yup.number().required(), 

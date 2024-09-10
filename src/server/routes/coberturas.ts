@@ -1,6 +1,5 @@
 import { Router } from "express";
 import { CoberturaController } from "../controllers/coberturas";
-import { TokemValidation } from "../shared/middlewares";
 
 const router = Router()
 

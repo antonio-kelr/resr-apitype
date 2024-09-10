@@ -3,10 +3,10 @@ import { ICoberturas} from '../../models';
 import { Knex } from '../../knex';
 
 
-export const updateById = async (id: number, agenda: Omit<ICoberturas, 'id'>): Promise<void | Error> => {
+export const updateById = async (id: number, cobertura: Omit<ICoberturas, 'id'>): Promise<void | Error> => {
   try {
     const result = await Knex(ETableNames.coberturas)
-      .update(agenda)
+      .update(cobertura)
       .where('id', '=', id);
 
     if (result > 0) return;

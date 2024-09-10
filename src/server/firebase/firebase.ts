@@ -1,16 +1,8 @@
-import admin from 'firebase-admin';
 import { Request, Response, NextFunction } from 'express';
 import { CoberturaImagensProvider } from '../database/providers/coberturaImagens';
+import { bucketInstance, BUCKET } from './buket'; 
 
-const serviceAccount = require('../../config/animated-cinema-392321-firebase-adminsdk-p2awy-259ada752f.json');
-const BUCKET = 'animated-cinema-392321.appspot.com';
 
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    storageBucket: BUCKET
-});
-
-const bucketInstance = admin.storage().bucket();
 
 interface UploadedFile extends Express.Multer.File {
     firebaseUrl?: string;

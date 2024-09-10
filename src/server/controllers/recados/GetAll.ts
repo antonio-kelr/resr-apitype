@@ -24,6 +24,7 @@ export const GetAllValidation = validation((getSchema) => ({
 export const getAll = async (req: Request<{}, {}, {}, IQueryProps>, res: Response) => {
   const result = await RecadosProvaider.getAll(req.query.page || 1, req.query.limit || 100 , req.query.filter || '', Number(req.query.id || 0));
   const count = await RecadosProvaider.count(req.query.filter);
+  
 
   if (result instanceof Error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({

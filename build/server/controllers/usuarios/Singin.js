@@ -71,7 +71,7 @@ const signIn = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
                 }
             });
         }
-        return res.status(http_status_codes_1.StatusCodes.OK).json({ accessToken });
+        return res.status(http_status_codes_1.StatusCodes.OK).json({ accessToken, userId: usuario.id });
     }
 });
 exports.signIn = signIn;

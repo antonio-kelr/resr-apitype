@@ -9,4 +9,7 @@ var ETableNames;
     ETableNames["agenda"] = "agenda";
     ETableNames["classificados"] = "classificados";
     ETableNames["categoria"] = "categoria";
+    ETableNames["coberturas"] = "coberturas";
+    ETableNames["coberturaimagens"] = "coberturaimagens";
+    ETableNames["recados"] = "recados";
 })(ETableNames || (exports.ETableNames = ETableNames = {}));

@@ -25,6 +25,7 @@ export const getAll = async (req: Request<{}, {}, {}, IQueryProps>, res: Respons
   const result = await CoberturaProvaider.getAll(req.query.page || 1, req.query.limit || 100 , req.query.filter || '', Number(req.query.id || 0));
   const count = await CoberturaProvaider.count(req.query.filter);
 
+
   if (result instanceof Error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
       errors: { default: result.message }

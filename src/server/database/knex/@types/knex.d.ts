@@ -1,4 +1,5 @@
-import {IAgenda, ICidades, ICoberturas, ICoberturasImagens, IPessoa, IUsuario} from '../../models'
+import {IAgenda, ICidades, IclassificaImgs, ICoberturas, ICoberturasImagens, INoticias, IPessoa, IUsuario} from '../../models'
+import { IClassificados } from '../../models/Classificados'
 import { IRecados } from '../../models/recados'
 
 declare module 'knex/types/tables' {
@@ -10,5 +11,8 @@ declare module 'knex/types/tables' {
       cobertura: ICoberturas
       coberturaimagens: ICoberturasImagens
       recado: IRecados
+      noticias: INoticias
+      classificados: IClassificados
+      classificadoImgs: IclassificaImgs
     }
   }

@@ -42,6 +42,7 @@ exports.singUpValidation = (0, middlewares_1.validation)((getSchema) => ({
         nome: yup.string().required().min(3),
         email: yup.string().required().email().min(6),
         senha: yup.string().required().min(6),
+        recado_id: yup.number().required()
     })),
 }));
 const SigUp = (req, res) => __awaiter(void 0, void 0, void 0, function* () {

@@ -1,7 +1,7 @@
 export interface IUsuario {
-    id: number,
-    nome: string,
-    email: string,
-    senha: string,
-    recado_id: number,
+  id: number;
+  nome: string;
+  email: string;
+  senha: string;
+  recado_id: number;
 }

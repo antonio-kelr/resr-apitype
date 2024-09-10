@@ -26,4 +26,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsuariosController = void 0;
 const signIn = __importStar(require("./Singin"));
 const signUp = __importStar(require("./SingUp"));
-exports.UsuariosController = Object.assign(Object.assign({}, signIn), signUp);
+const getall = __importStar(require("./Getall"));
+exports.UsuariosController = Object.assign(Object.assign(Object.assign({}, signIn), signUp), getall);

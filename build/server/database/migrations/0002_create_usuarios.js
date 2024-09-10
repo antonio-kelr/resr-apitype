@@ -20,6 +20,8 @@ function up(knex) {
             table.string('nome').notNullable().checkLength('>', 3);
             table.string('email').index().unique().notNullable().checkLength('>', 6);
             table.string('senha').checkLength('>=', 6);
+            table.bigInteger('recado_id').unsigned().index();
+            table.foreign('recado_id').references('id').inTable(ETableNames_1.ETableNames.recados).onDelete('CASCADE');
             table.comment('Tabela usada para armazenar.usuarios do sistema.');
         })
             .then(() => {
@@ -30,10 +32,7 @@ function up(knex) {
 exports.up = up;
 function down(knex) {
     return __awaiter(this, void 0, void 0, function* () {
-        return knex
-            .schema
-            .dropTable(ETableNames_1.ETableNames.usuario)
-            .then(() => {
+        return knex.schema.dropTable(ETableNames_1.ETableNames.usuario).then(() => {
             console.log(`# Dropped table ${ETableNames_1.ETableNames.usuario}`);
         });
     });

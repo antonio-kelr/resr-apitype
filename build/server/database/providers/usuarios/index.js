@@ -26,4 +26,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.UsuarioProvader = void 0;
 const getById = __importStar(require("./GetEmail"));
 const create = __importStar(require("./Create"));
-exports.UsuarioProvader = Object.assign(Object.assign({}, getById), create);
+const getall = __importStar(require("./Getall"));
+const cout = __importStar(require("./cout"));
+exports.UsuarioProvader = Object.assign(Object.assign(Object.assign(Object.assign({}, getById), create), getall), cout);

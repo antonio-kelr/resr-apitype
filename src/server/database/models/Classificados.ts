@@ -1,3 +1,4 @@
+
 export interface IClassificados {
   id: number
   titulo: string
@@ -9,4 +10,5 @@ export interface IClassificados {
   estado: string
   categoria: number
   data?: Date
+
 }

@@ -18,3 +18,6 @@ __exportStar(require("./cidades"), exports);
 __exportStar(require("./pessoas"), exports);
 __exportStar(require("./usuarios"), exports);
 __exportStar(require("./agendas"), exports);
+__exportStar(require("./coberturas"), exports);
+__exportStar(require("./coberturaimagens"), exports);
+__exportStar(require("./recados"), exports);
