@@ -15,7 +15,8 @@ const uploads = multer({
 });
 
 router.get('', NoticiaController.GetAllValidation, NoticiaController.getAll);
-router.get('/:id', NoticiaController.GetByIdNoticias, NoticiaController.getById);
+// router.get('/:id', NoticiaController.GetByIdNoticias, NoticiaController.getById);
+router.get('/:slug', NoticiaController.GetBySlugValidation, NoticiaController.getBySlugnoticia);
 router.post('',  uploads.single("imagen"), uploadSingleImg, NoticiaController.CreateValidation, NoticiaController.Create);
 router.put('/:id', uploads.single("imagen"), uploadSingleImg, NoticiaController.updateNoticias, NoticiaController.update);
 router.delete('/:id', NoticiaController.DeleteValidation, NoticiaController.deleteById);

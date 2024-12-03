@@ -18,3 +18,4 @@ export const getById = async (id: number): Promise<ICoberturas | Error> => {
     return new Error('Erro ao consultar o registro');
   }
 };
+

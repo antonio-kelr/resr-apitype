@@ -10,7 +10,8 @@ export const uploadSingleImg = async (req: Request, res: Response, next: NextFun
     console.log('Arquivo recebido:', file);
 
     if (!file) {
-        return res.status(400).json({ error: 'Nenhum arquivo enviado.' });
+        console.log('Nenhum arquivo enviado, continuando para o próximo middleware.');
+        return next(); // Continua para o próximo middleware sem erro
     }
 
     try {

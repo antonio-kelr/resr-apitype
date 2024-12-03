@@ -5,6 +5,7 @@ export async function up(knex: Knex) {
   return knex.schema.createTable(ETableNames.coberturas, table => {
     table.bigIncrements('id').primary().index();
     table.string('titulo').index().notNullable();
+    table.string('slug').notNullable().unique(); 
     table.date('data').index().notNullable();
     table.text('descricao').notNullable();
 

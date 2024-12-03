@@ -6,6 +6,7 @@ interface IUpdateRecado {
   telefone?: string;
   email?: string;
   mensagem?: string;
+  slug?:string;
   usuario_id?: number;
 }
 
@@ -21,6 +22,7 @@ export const updateById  = async (id: number,updatedData: IUpdateRecado): Promis
         nome: updatedData.nome,
         telefone: updatedData.telefone,
         email: updatedData.email,
+        slug: updatedData.slug,
         mensagem: updatedData.mensagem,
         usuario_id: updatedData.usuario_id
       });

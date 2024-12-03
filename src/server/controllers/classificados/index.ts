@@ -4,9 +4,10 @@ import * as yup from "yup";
 import { validation } from "../../shared/middlewares";
 import { ClassificadosProvider } from "../../database/providers/classificados";
 import { IClassificados } from "../../database/models/Classificados";
+import { generateSlug } from "../slug/slug";
 
 // Validação para criação
-interface IBodyProps extends Omit<IClassificados, "id" | "classificadoImg"> {}
+interface IBodyProps extends Omit<IClassificados, "id" | "classificadoImg" | 'slug'> {}
 export const CreateValidation = validation((getSchema) => ({
   body: getSchema<IBodyProps>(
     yup.object().shape({
@@ -34,10 +35,13 @@ export const DeleteValidation = validation((getSchema) => ({
   ),
 }));
 
+
 export const ClassificadosController = {
   async create(req: Request<{}, {}, IClassificados>, res: Response) {
     const date = new Date();
     req.body.data = date;
+    const slug = req.body.slug = generateSlug(req.body.titulo);
+
 
     const result = await ClassificadosProvider.create(req.body);
 

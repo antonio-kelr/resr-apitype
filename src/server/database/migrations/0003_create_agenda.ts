@@ -7,6 +7,8 @@ export async function up(knex: Knex) {
     table.string('nome', ).index().notNullable();
     table.date('data').index().notNullable();
     table.text('descricao').index().notNullable();
+    table.string('url').notNullable();
+
 
     table.comment('Tabela usada para armazenar entradas na agenda.');
   }).then(() => {

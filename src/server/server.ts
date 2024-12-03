@@ -8,6 +8,8 @@ import agendasRouter from './routes/agendas'
 import coberturaRouter from './routes/coberturas'
 import coberturaImagensRouter from './routes/coberturaImagens'
 import recadoRouter from './routes/recados'
+import bannerRouter from './routes/Banner'
+import AnucioRouter from './routes/Anucio'
 import usuariosRouter from './routes/usuarios'
 import classificadosRouter from './routes/classificados'
 import classificadoImgsRouter from './routes/classificadoImgs'
@@ -37,6 +39,8 @@ server.use('/coberturas', coberturaRouter)
 server.use('/coberturasImg', coberturaImagensRouter)
 server.use('/classificados', classificadosRouter)
 server.use('/classifcadoImgs', classificadoImgsRouter)
+server.use('/banner', bannerRouter)
+server.use('/anucios', AnucioRouter)
 
 
 export { server }

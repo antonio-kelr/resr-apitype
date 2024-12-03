@@ -10,5 +10,7 @@ export enum ETableNames {
   coberturaimagens = 'coberturaimagens',
   recados = 'recados',
   noticias = 'noticas',
+  banner = 'banner',
+  anucio = 'anucio',
   classificadoimgs = 'classificadoimgs',
 }

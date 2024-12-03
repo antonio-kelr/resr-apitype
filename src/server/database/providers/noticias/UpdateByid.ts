@@ -1,5 +1,4 @@
 import { ETableNames } from '../../ETableNames';
-import { INoticias } from '../../models';
 import { Knex } from '../../knex';
 
 

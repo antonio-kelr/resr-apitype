@@ -5,11 +5,15 @@ import { validation } from "../../shared/middlewares";
 import { StatusCodes } from "http-status-codes";
 import { IClassificados } from "../../database/models";
 import { UpdateClassificados } from "../../database/providers/classificados/Update";
+import { generateSlug } from "../slug/slug";
 
 interface IParamProps {
   id?: number;
 }
-interface IBodyProps extends Omit<IClassificados, "id" | "classificadoImg"> {}
+interface IBodyProps extends Omit<IClassificados, "id" | "classificadoImg" | 'slug'> {
+  slug?: string; // O slug pode ser opcional aqui
+
+}
 export const UpdateClassificado = validation((getSchema) => ({
   body: getSchema<IBodyProps>(
     yup.object().shape({
@@ -21,6 +25,8 @@ export const UpdateClassificado = validation((getSchema) => ({
       cidade: yup.string().required().min(3).max(150),
       estado: yup.string().required().min(2).max(2),
       categoria: yup.number().required(),
+      slug: yup.string().optional(), // Incluindo o slug como opcional
+
       data: yup.date(),
     })
   ),
@@ -42,6 +48,11 @@ export const update = async (
       },
     });
   }
+    // Gerar novo slug a partir do título atualizado
+    const slug = generateSlug(req.body.titulo);
+    req.body.slug = slug; // Adiciona o novo slug ao corpo da requisição
+  
+  
   const result = await UpdateClassificados(req.params.id, req.body);
   if (result instanceof Error) {
     return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({

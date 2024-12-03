@@ -7,3 +7,5 @@ export * from "./coberturaImagens";
 export * from "./Classificados";
 export * from "./Noticias";
 export * from "./classificadosImg";
+export * from "./banner";
+export * from "./anucio";
